@@ -11,7 +11,7 @@ resource "aws_instance" "web" {
               EOF
 
   tags = {
-    Name = "Testing Github Actions"
+    Name = "Testing Github Actions!"
   }
 }
 
