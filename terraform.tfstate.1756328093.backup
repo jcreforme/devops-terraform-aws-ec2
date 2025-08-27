@@ -1,15 +1,15 @@
 {
   "version": 4,
   "terraform_version": "1.12.2",
-  "serial": 7,
+  "serial": 4,
   "lineage": "cdf9d014-b74b-1219-7df4-57c87b1b8b91",
   "outputs": {
     "instance_id": {
-      "value": "i-0feb83b198034aa9a",
+      "value": "i-07714e27ac6775c97",
       "type": "string"
     },
     "public_ip": {
-      "value": "3.144.238.162",
+      "value": "3.144.24.6",
       "type": "string"
     }
   },
@@ -24,7 +24,7 @@
           "schema_version": 2,
           "attributes": {
             "ami": "ami-005efd5afe550784a",
-            "arn": "arn:aws:ec2:us-east-2:149591431628:instance/i-0feb83b198034aa9a",
+            "arn": "arn:aws:ec2:us-east-2:149591431628:instance/i-07714e27ac6775c97",
             "associate_public_ip_address": true,
             "availability_zone": "us-east-2c",
             "capacity_reservation_specification": [
@@ -62,7 +62,7 @@
             "host_id": "",
             "host_resource_group_arn": null,
             "iam_instance_profile": "",
-            "id": "i-0feb83b198034aa9a",
+            "id": "i-07714e27ac6775c97",
             "instance_initiated_shutdown_behavior": "stop",
             "instance_lifecycle": "",
             "instance_market_options": [],
@@ -95,11 +95,11 @@
             "primary_network_interface": [
               {
                 "delete_on_termination": true,
-                "network_interface_id": "eni-037a84842f6bd8bd8"
+                "network_interface_id": "eni-0a0c55115c8e0fa20"
               }
             ],
-            "primary_network_interface_id": "eni-037a84842f6bd8bd8",
-            "private_dns": "ip-172-31-44-88.us-east-2.compute.internal",
+            "primary_network_interface_id": "eni-0a0c55115c8e0fa20",
+            "private_dns": "ip-172-31-41-191.us-east-2.compute.internal",
             "private_dns_name_options": [
               {
                 "enable_resource_name_dns_a_record": false,
@@ -107,9 +107,9 @@
                 "hostname_type": "ip-name"
               }
             ],
-            "private_ip": "172.31.44.88",
-            "public_dns": "ec2-3-144-238-162.us-east-2.compute.amazonaws.com",
-            "public_ip": "3.144.238.162",
+            "private_ip": "172.31.41.191",
+            "public_dns": "ec2-3-144-24-6.us-east-2.compute.amazonaws.com",
+            "public_ip": "3.144.24.6",
             "region": "us-east-2",
             "root_block_device": [
               {
@@ -121,7 +121,7 @@
                 "tags": {},
                 "tags_all": {},
                 "throughput": 0,
-                "volume_id": "vol-0382df1c56e11764f",
+                "volume_id": "vol-0d6c8e701a776e1ae",
                 "volume_size": 8,
                 "volume_type": "gp2"
               }
@@ -134,16 +134,10 @@
             "spot_instance_request_id": "",
             "subnet_id": "subnet-0c5bcf4fc51c396d0",
             "tags": {
-              "DeployedBy": "GitHubActions",
-              "Environment": "dev",
-              "Name": "Testing Github Actions!",
-              "Timestamp": "2025-08-27T20:55:56Z"
+              "Name": "DevOpsProjectInstance"
             },
             "tags_all": {
-              "DeployedBy": "GitHubActions",
-              "Environment": "dev",
-              "Name": "Testing Github Actions!",
-              "Timestamp": "2025-08-27T20:55:56Z"
+              "Name": "DevOpsProjectInstance"
             },
             "tenancy": "default",
             "timeouts": null,
@@ -211,7 +205,7 @@
             "owner_id": "149591431628",
             "region": "us-east-2",
             "revoke_rules_on_delete": false,
-            "tags": {},
+            "tags": null,
             "tags_all": {},
             "timeouts": null,
             "vpc_id": "vpc-0fe7f4f276746a19b"

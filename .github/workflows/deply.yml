@@ -37,6 +37,7 @@ jobs:
 
     - name: Terraform Apply
       run: |
+        terraform refresh -var-file="terraform.tfvars \
         aws ec2 describe-instances \
         --filters "Name=tag:Name,Values=DevOpsProjectInstance" \
         --region us-east-2 \
