@@ -12,6 +12,9 @@ resource "aws_instance" "web" {
 
   tags = {
     Name = "Testing Github Actions!"
+    DeployedBy  = "GitHubActions"
+    Environment = "dev"
+    Timestamp   = "${timestamp()}"
   }
 }
 
