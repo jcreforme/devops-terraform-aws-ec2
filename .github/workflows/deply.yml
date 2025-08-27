@@ -35,11 +35,12 @@ jobs:
     - name: Terraform Plan
       run: terraform plan -var-file="terraform.tfvars"
 
-    - name: Terraform Apply
+    - name: Terraform Apply and Verify
       run: |
-        terraform refresh -var-file="terraform.tfvars \
+        terraform refresh -var-file="terraform.tfvars"
         aws ec2 describe-instances \
-        --filters "Name=tag:Name,Values=DevOpsProjectInstance" \
-        --region us-east-2 \
-        --query "Reservations[*].Instances[*].InstanceId" \
-        --output text
+          --filters "Name=tag:Name,Values=DevOpsProjectInstance" \
+          --region us-east-2 \
+          --query "Reservations[*].Instances[*].InstanceId" \
+          --output text
+    
