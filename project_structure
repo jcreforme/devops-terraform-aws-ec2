@@ -1,0 +1,8 @@
+terraform-aws-ec2/
+├── main.tf              # Core infrastructure definition
+├── variables.tf         # Input variables
+├── outputs.tf           # Output values
+├── provider.tf          # AWS provider config
+├── terraform.tfvars     # Variable values (excluded from Git)
+├── .gitignore           # Protect secrets and state
+└── README.md            # Project instructions
