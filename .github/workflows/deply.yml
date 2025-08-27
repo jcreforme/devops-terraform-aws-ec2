@@ -32,15 +32,17 @@ jobs:
     - name: Terraform Init
       run: terraform init
 
-    - name: Terraform Plan
-      run: terraform plan -var-file="terraform.tfvars"
+    - name: Remove EC2 from State
+      run: terraform state rm aws_instance.web || echo "Resource not found in state"
 
-    - name: Terraform Apply and Verify
+    - name: Terraform Apply
+      run: terraform apply -auto-approve -var-file="terraform.tfvars"
+
+    - name: Verify EC2 Instance
       run: |
-        terraform refresh -var-file="terraform.tfvars"
         aws ec2 describe-instances \
           --filters "Name=tag:Name,Values=DevOpsProjectInstance" \
           --region us-east-2 \
-          --query "Reservations[*].Instances[*].InstanceId" \
-          --output text
+          --query "Reservations[*].Instances[*].[InstanceId,State.Name,PublicIpAddress]" \
+          --output table
     
